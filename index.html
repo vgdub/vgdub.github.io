@@ -1,23 +1,24 @@
 ---
-layout: default
+layout: landing
 ---
 
-<div class="home">
+<section class="hero fade-in" style="background-image:url({{ "/greg-williams-hero.jpg" | prepend: site.baseurl_assets_images }});">
+  {% include header.html %}
+  <div class="section-gradient section-gradient--darker"></div>
+  <!-- <img src="{{ "/greg-williams-hero.jpg" | prepend: site.baseurl_assets_images }}" alt="" class="hero-img"> -->
+  <h1 class="hero-heading">Greg Williams</h1>
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+</section>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<main class="page-content">
+  <div class="wrapper">
+    <p>I'm a 29 year old iOS developer living in Berlin, Germany.</p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <p>I love building things. I co-founded, built and currently work at <a href="https://matchup.io">Matchup</a>, a platform to help groups of any size get active & build healthy habits through friendly or competitive challenges using fitness tracking devices.</p>
 
-</div>
+    <p>I'm currently learning visual design at <a href="http://starterleague.com">The Starter League</a>, teaching myself Swift/iOS, and am an experienced Ruby/Rails, Angular, & Front-end developer.</p>
+
+    <p>I plan to start writing again soon, but for now I tweet as <a href="http://twitter.com/vgdub">@vgdub</a>.</p>
+  </div>
+</main>

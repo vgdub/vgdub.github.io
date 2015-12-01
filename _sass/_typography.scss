@@ -1,0 +1,150 @@
+//
+// Variables
+// --------------------------------------------------
+
+$franklin-gothic: franklin-gothic-urw, arial;
+$futura-pt: futura-pt;
+
+
+//
+// Variables
+// --------------------------------------------------
+
+/* Example use: @extend %basefont-bold */
+
+%basefont {
+  font-weight: 300;
+  font-style: normal;
+  font-family: $franklin-gothic;
+}
+
+%basefont-med {
+  @extend %basefont;
+  font-weight: 500;
+}
+
+%basefont-bold {
+  @extend %basefont;
+  font-weight: bold;
+}
+
+%basefont-italic {
+  @extend %basefont;
+  font-style: italic;
+}
+
+%altfont {
+  font-weight: 300;
+  font-style: normal;
+  font-family: $futura-pt;
+}
+
+%altfont-bold {
+  @extend %altfont;
+  font-weight: bold;
+}
+
+%altfont-italic {
+  @extend %altfont;
+  font-style: italic;
+}
+
+
+/* Type Sizing
+   ============================================================== */
+
+/* All font sizes should be provided as rems, with a
+ * pixel fallback for older browsers. */
+
+/* Example use: @include typeset(14, 1.5)
+
+    Font-size value in pixels.
+
+    results in:
+    font-size: 0.875em; // Fallback from rems
+    font-size: 0.875rems;
+    line-height: 1.5;
+
+*/
+
+@mixin typeset ($font-size: 16, $line-height: 1.2) {
+  font-size: ($font-size / 16) + em;
+  font-size: ($font-size / 16) + rem;
+  line-height: $line-height;
+}
+
+body {
+  @extend %basefont;
+  // font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $body-bg;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+blockquote {
+  @include typeset(18, 1.3);
+  @extend %basefont-med;
+  @extend .clearfix;
+  color: $blockquote-color;
+  text-align: left;
+  text-indent: 16px;
+  @include media($on-laptop) {
+    @include typeset(16, 1.2);
+  }
+  p {
+    border-left: .4em solid $brand-primary;
+    padding: 1em 1em 1em 2em;
+    background: transparentize($brand-primary, 0.8);
+    margin: 0;
+  }
+}
+
+h1 {
+  @include typeset(40, 1.2);
+  margin: 0 auto .5em;
+  @extend %altfont-bold;
+  letter-spacing: -1px;
+  @include media($on-laptop) {
+    @include typeset(30, 1.2);
+    text-align: left;
+  }
+}
+
+h2 {
+  @extend %altfont-bold;
+  @include typeset(25, 1.2);
+  margin: 1em 0;
+  letter-spacing: 1px;
+  @include media($on-laptop) {
+    @include typeset(20, 1.2);
+    text-align: left;
+  }
+}
+
+p {
+  @extend %basefont;
+  @include typeset(18, 1.5);
+  margin-bottom: 1em;
+  text-indent: 0;
+  word-wrap: break-word;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  @include media($on-laptop) {
+    @include typeset(16, 1.2);
+  }
+}

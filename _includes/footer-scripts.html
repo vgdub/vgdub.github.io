@@ -1,0 +1,19 @@
+<!-- Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- <script src="{{ "imagesloaded.pkgd.min.js" | prepend: site.baseurl }}"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+<!-- <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script> -->
+
+<script>
+  $(document).ready(function(){
+    // Featured image loaded behavior
+    $('.hero').imagesLoaded({ background: true }, function(){
+      $('.hero.fade-in').addClass('is-loaded');
+      $('.hero-heading').addClass('animated fadeInDown');
+    });
+      // .done( function( instance ) {
+      //   $('.hero-img').addClass('is-loaded');
+      //   $('.page-hero').
+      // });
+  });
+</script>
