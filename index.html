@@ -3,22 +3,65 @@ layout: landing
 ---
 
 <section class="hero fade-in" style="background-image:url({{ "/greg-williams-hero.jpg" | prepend: site.baseurl_assets_images }});">
-  {% include header.html %}
   <div class="section-gradient section-gradient--darker"></div>
   <!-- <img src="{{ "/greg-williams-hero.jpg" | prepend: site.baseurl_assets_images }}" alt="" class="hero-img"> -->
-  <h1 class="hero-heading">Greg Williams</h1>
+  <h1 class="hero-heading alt">Greg Williams</h1>
 
 
 </section>
 
 <main class="page-content">
   <div class="wrapper">
-    <p>I'm a 29 year old iOS developer living in Berlin, Germany.</p>
+    <h2>About</h2>
+    <p>
+      I am an iOS & fullstack web developer, and product of the Chicago software & startup community. I'm currently in the process of fulfilling my dream of moving to Berlin, Germany.
+    </p>
 
-    <p>I love building things. I co-founded, built and currently work at <a href="https://matchup.io">Matchup</a>, a platform to help groups of any size get active & build healthy habits through friendly or competitive challenges using fitness tracking devices.</p>
+    <p>
+      I'm passionate about building products, learning, traveling, and football.
+    </p>
 
-    <p>I'm currently learning visual design at <a href="http://starterleague.com">The Starter League</a>, teaching myself Swift/iOS, and am an experienced Ruby/Rails, Angular, & Front-end developer.</p>
+    <p>
+      I co-founded, and built <a href="https://matchup.io">Matchup</a>, a platform to help groups of any size get active & build healthy habits through friendly or competitive challenges using fitness tracking devices.
+    </p>
 
-    <p>I plan to start writing again soon, but for now I tweet as <a href="http://twitter.com/vgdub">@vgdub</a>.</p>
+    <div class="row">
+      <ul class="col-xs">
+        <li>
+          <h3>Past</h3>
+        </li>
+        <li>
+          <a href="https://itunes.apple.com/us/app/matchup-challenge-yourself/id933359805?ls=1&mt=8">Matchup for iOS</a>
+        </li>
+        <li>
+          <a href="https://matchup.io">Matchup</a>
+        </li>
+        <li>
+          <a href="http://3binary.com">3binary</a>
+        </li>
+        <li>
+          <a href="http://projecttravel.com/">Project Travel</a>
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2>Reading</h2>
+
+    <div class="row middle-xs book">
+      <figure class="col-xs-12
+                     col-sm-2">
+        <img src="{{ "/berlin-rory-maclean.jpg" | prepend: site.baseurl_assets_images }}" alt="Berlin by Rory MacLean" class="book-cover">
+      </figure>
+      <div class="col-xs-12
+                  col-sm">
+        <p><strong>Berlin</strong> by <i>Rory Maclean</i></p>
+        <p>
+          I picked this book up after falling in love with the city after only a couple weeks. As I'm in the process of moving here, I figured this would be a great way to gain a better understanding of how Berlin's unique culture developed over the years.
+        </p>
+      </div>
+    </div>
+
   </div>
 </main>

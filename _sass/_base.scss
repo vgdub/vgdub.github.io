@@ -62,6 +62,10 @@ img {
 /**
  * Figures
  */
+figure {
+    margin: 0 0 1em;
+}
+
 figure > img {
     display: block;
 }
@@ -75,35 +79,17 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
-    margin-left: $spacing-unit;
-}
+// ul, ol {
+//     margin-left: $spacing-unit;
+// }
 
 li {
+    list-style: none;
     > ul,
     > ol {
          margin-bottom: 0;
     }
 }
-
-/**
- * Links
- */
-a {
-    color: $brand-color;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
-}
-
-
 
 /**
  * Blockquotes

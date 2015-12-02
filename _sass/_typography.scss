@@ -93,7 +93,8 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+  margin-top: 0;
+  margin-bottom: $spacing-unit / 2;
 }
 
 blockquote {
@@ -114,25 +115,31 @@ blockquote {
   }
 }
 
+h1, h2, h3, h4, h5 {
+  @extend %basefont-med;
+}
+
 h1 {
   @include typeset(40, 1.2);
   margin: 0 auto .5em;
-  @extend %altfont-bold;
   letter-spacing: -1px;
   @include media($on-laptop) {
     @include typeset(30, 1.2);
-    text-align: left;
+  }
+  &.alt {
+    @extend %altfont-bold;
   }
 }
 
 h2 {
-  @extend %altfont-bold;
   @include typeset(25, 1.2);
-  margin: 1em 0;
+  margin: 0 0 1em;
   letter-spacing: 1px;
   @include media($on-laptop) {
     @include typeset(20, 1.2);
-    text-align: left;
+  }
+  &.alt {
+    @extend %altfont-bold;
   }
 }
 
@@ -147,4 +154,27 @@ p {
   @include media($on-laptop) {
     @include typeset(16, 1.2);
   }
+}
+
+a {
+  @include action-state($link-color, $border-bottom: true);
+  // @include transition;
+  border-bottom: 1px solid $light-grey;
+  color: $link-color;
+  text-decoration: none;
+  &::-moz-selection {
+    background: $selection-color;
+    color: $link-color;
+    text-shadow: none;
+  }
+  &::selection {
+    background: $selection-color;
+    color: $link-color;
+    text-shadow: none;
+  }
+}
+
+%alt-link {
+  border-bottom: 0;
+  @include action-state($primary-color);
 }

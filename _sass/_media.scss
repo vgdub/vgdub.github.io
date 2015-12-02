@@ -2,3 +2,18 @@
 // Media
 // --------------------------------------------------
 
+.book {
+
+}
+
+.book-cover {
+  max-height: 150px;
+  // margin: 0 auto;
+  @include media($on-palm) {
+    margin: 0;
+  }
+}
+
+.book-description {
+
+}

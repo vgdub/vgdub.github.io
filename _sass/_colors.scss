@@ -11,6 +11,38 @@ $gray-lighter:          lighten(#000, 93.5%) !default; // #eee
 
 $white:                 #fff;
 $black:                 #222;
+$orange:                #EE5438;
+$blue:                  #26ADE4;
+
+$light-grey: #E3E3E3;
+$med-grey: #9C9C9C;
+$dark-grey: #525252;
+
+$black: #000;
+
+$orange: #EE5438;
+$red: #FE0002;
+
+$ruby: #AC0500;
+$html: #E54D26;
+$css: #0070BA;
+
+$dark-navy: #2C3E50;
+
+// Brand colors
+$primary-color: $blue;
+$secondary-color: $dark-navy;
+
+// Text Colors
+$text-color: $dark-grey;
+$blockquote-color: $dark-grey;
+$alt-text-color: $med-grey;
+$link-color: $primary-color;
+
+$content-break-color: $light-grey;
+
+$selection-color: $secondary-color;
+$selection-text-color: $light-grey;
 
 $brand-primary:         #428bca !default;
 $brand-success:         #5cb85c !default;
@@ -29,9 +61,9 @@ $metabar-top-bg:        #eee !default;
 
 $hero-gradient:         $gray-dark;
 
-$text-color:       #111;
+// $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      $primary-color;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
