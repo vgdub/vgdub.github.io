@@ -52,16 +52,34 @@
   }
 }
 
-.hero-heading {
+.hero-copy {
   color: $white;
   width: 100%;
   position: absolute;
-  @include typeset(60, 1.2);
   z-index: $zIndex-hero-heading;
   text-align: center;
-  top: 70%;
+  top: 40%;
+}
+
+.hero-heading {
+  @include typeset(105, 1.2);
+  margin-bottom: 0;
   @include media($on-laptop) {
-    @include typeset(35, 1.2);
+    @include typeset(70, 1.2);
+  }
+  @include media($on-palm) {
+    @include typeset(50, 1.2);
+  }
+}
+
+.hero-subheading {
+  @extend %basefont;
+  @include typeset(35, 1.2);
+  @include media($on-laptop) {
+    @include typeset(25, 1.2);
+  }
+  @include media($on-palm) {
+    @include typeset(20, 1.2);
   }
 }
 
