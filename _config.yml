@@ -16,6 +16,7 @@ url: "http://vgdub.com" # the base hostname & protocol for your site
 twitter_username: vgdub
 github_username:  vgdub
 instagram_username: vgdub
+linkedin_username: vincentgwilliams
 
 # Build settings
 markdown: kramdown
