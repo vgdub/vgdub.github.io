@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Greg Williams
-email: greg@vgdub.com
+title: Vincent Williams
+email: hello@vgdub.com
 description: > # this means to ignore newlines until "baseurl:"
-  I'm currently looking for remote & full-time work in Berlin.
+  I'm currently developing iOS apps at Zalando.
 baseurl: "" # the subpath of your site, e.g. /blog
 baseurl_assets_images: "assets/images"
 url: "http://vgdub.com" # the base hostname & protocol for your site
