@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Greg Williams -- owner/dev/design -- @vgdub
+    Vincent Greg Williams Jr -- owner/dev/design -- @vgdub
 
 
 # TECHNOLOGY COLOPHON
